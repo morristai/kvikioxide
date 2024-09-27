@@ -1,0 +1,3 @@
+[submodule "kvikio"]
+	path = kvikio
+	url = https://github.com/rapidsai/kvikio.git
