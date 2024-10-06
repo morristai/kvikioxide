@@ -2,6 +2,39 @@
 name = "kvikioxide"
 version = "0.1.0"
 edition = "2021"
+license = "Apache-2.0"
+build = "build.rs"
+links = "kvikio"
+include = [
+    "Cargo.toml",
+    "build.rs",
+    "src/**/*.h",
+    "src/**/*.cpp" ]
+
+description = "Safe wrappers around CUDA apis"
+homepage = "https://github.com/morristai/kvikioxide"
+documentation = ""
+repository = "https://github.com/morristai/kvikioxide"
+readme = "README.md"
+
+keywords = [
+    "kvikioxide",
+    "kvikio",
+    "cuda",
+    "nvidia",
+    "gpu",
+]
+
+#[features]
 
 [dependencies]
+cxx = "1.0.128"
 autocxx = "0.27.0"
+
+[build-dependencies]
+#cxx-build = "1.0.128"
+autocxx-build = "0.27.0"
+miette = { version = "7.2.0", features = ["fancy"] }
+
+[dev-dependencies]
+cudarc = { version = "0.12.1", features = ["cuda-12060"] }
